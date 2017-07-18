@@ -1,0 +1,16 @@
+{{ template "header" . }}
+    
+<ul>
+    <li><a href="/">Index</a></li>
+    <li><a href="/write">Write</a></li>
+    <li><a href="/read">Read</a></li>
+    <li><a href="/delete">Delete</a></li>
+</ul>
+
+{{if .Cookie}}
+    <div>
+        <h1>Cookie value: {{ .Cookie.Value }}</h1>
+    </div>
+{{end}}
+
+{{ template "footer" . }}
